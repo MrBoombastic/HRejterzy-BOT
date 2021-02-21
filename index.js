@@ -1,7 +1,7 @@
 const fs = require('fs');
-const Discord = require('discord.js-light');
-const {prefix, token, cooldownTime} = require('./config.json');
-global.cooldown = new Map();
+global.Discord = require('discord.js-light');
+global.config = require('./config.json');
+const cooldown = new Map();
 
 global.client = new Discord.Client({
     messageCacheLifetime: 10,
@@ -20,7 +20,8 @@ global.client = new Discord.Client({
         intents: ["GUILD_MESSAGES"]
     }
 });
-client.commands = new Discord.Collection();
+client.commands = new Map();
+const updateActivity = () => client.user.setActivity("hrhelp | Error: Object reference is not set to an instance of an object.");
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -29,15 +30,19 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.on('ready', () => console.log('Rajesh is ready to help you with all of your issues!'));
-
-client.on('message', message => {
-    if (!message.content.startsWith(prefix) || message.author.bot || !message.guild) return;
-    if (cooldown.get(message.channel.id) > Date.now()) return message.channel.send("Nie tak szybko! Komendy na tym kanale można używać co 5 sekund!");
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-    client.commands.get(command).run(message, args, Discord);
-    cooldown.set(message.channel.id, Date.now() + cooldownTime);
+client.on('ready', () => {
+    console.log('Rajesh is ready to help you with all of your issues!');
+    updateActivity();
+    setInterval(updateActivity, 1000 * 60 * 5);
 });
 
-client.login(token);
+client.on('message', message => {
+    if (!message.content.startsWith(config.prefix) || message.author.bot || !message.guild) return;
+    if (cooldown.get(message.channel.id) > Date.now()) return message.channel.send(`Nie tak szybko! Komend na tym kanale można używać co ${config.cooldownTime / 1000} sekundy!`);
+    const args = message.content.slice(config.prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    client.commands.get(command).run(message, args, Discord);
+    cooldown.set(message.channel.id, Date.now() + config.cooldownTime);
+});
+
+client.login(config.token);

@@ -1,6 +1,6 @@
 {
-  "name": "hrejterzy",
-  "version": "1.0.0",
+  "name": "hrejterzy-bot",
+  "version": "2.0.0",
   "description": "Discord bot serving random quotes from HRejterzy YouTube channel.",
   "main": "index.js",
   "author": "MrBoombastic",

@@ -2,7 +2,7 @@ const quotes = require("../quotes.js");
 
 module.exports = {
     name: 'random',
-    async run(message, args, Discord) {
+    async run(message) {
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         const embed = new Discord.MessageEmbed()
             .setColor('RANDOM')
