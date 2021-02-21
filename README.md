@@ -1,20 +1,7 @@
-# HRejterzy-Bot
-A bot that sending a random quote from HRejterzy youtube channel.
-# Instalation
-This bot actually not hosted 24/7, but  you can run it on your computer!
-## Install dependecies
-```shell
-npm install
-```
-## Lint (optionally)
-```shell
-npm run lint
-```
-## Start
-```shell
-npm start
-```
-## License
-This bot is served on GNU(Generalnie Najebany Użytkownik)
+# HRejterzy BOT
 
-Copyright (c) Marcin Kowalicki
+Discord bot serving random quotes from HRejterzy YouTube channel.
+
+## License
+
+This bot is served on GNU license (Generalnie Najebany Użytkownik).
