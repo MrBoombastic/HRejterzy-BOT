@@ -17,7 +17,7 @@ jobs:
         node-version: '15'
     - run: npm install
     - run: npm install pkg -g
-    - run: pkg index.js
+    - run: pkg index.js --target node14-win-x64
   
   release:
     runs-on: ubuntu-latest
