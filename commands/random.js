@@ -1,31 +1,17 @@
-/*
-	By Marcin "MarcinK50" Kowalicki
-	on license GNU(Generalnie Najebany Użytkownik)
-*/
+const quotes = require("../quotes.js");
+
 module.exports = {
-	name: 'random',
-	description: 'Send a random quote',
-	execute(message, args) {
-		const fs = require('fs');
-		const Discord = require('discord.js');
+    name: 'random',
+    async run(message, args, Discord) {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        const embed = new Discord.MessageEmbed()
+            .setColor('RANDOM')
+            .setFooter('HRejterzy', "https://codetwocdn.azureedge.net/images/css-assets/top-C2Logo-2020.png")
+            .setURL(randomQuote.episode.url)
+            .setDescription("> " + randomQuote.text.replaceAll("\n", "\n> "))
+            .setTimestamp()
+            .setTitle(randomQuote.episode.name);
 
-		const rawData = fs.readFileSync('quotes.json'); // Import JSON with quotes
-		const parsedData = JSON.parse(rawData); // Parse data from JSON
-		const random = Math.floor(Math.random() * 6); // Generate random number
-		const quote = parsedData[random].quote; 
-		const episode = parsedData[random].episode;
-
-		const exampleEmbed = new Discord.MessageEmbed()
-			.setColor('#0099ff')
-			.setTitle('HRejterzy')
-			.setURL('https://www.codetwo.pl/praca/o-hr-wiemy-wszystko')
-			.addFields(
-				{ name: 'Cytat:', value:`${quote}` },
-				{ name: 'Odcinek:', value: `${episode}` },
-			)
-			.setTimestamp()
-			.setFooter('By MarcinK50#9775', 'https://github.com/MarcinK50');
-
-		message.channel.send(exampleEmbed); // Send embed
-	},
+        await message.channel.send(embed);
+    },
 };
