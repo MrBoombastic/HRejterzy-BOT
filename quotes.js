@@ -31,7 +31,7 @@ module.exports =
             episode: {name: "Najlepsza lekcja informatyki ever", url: "https://www.youtube.com/watch?v=HCH92jtqF0k"}
         },
         {
-            text: "- Pokutę masz na OneDrive, w folderze z krzyżami.\n- Jakim folderze z krzyżami?\n- No ten XXX",
+            text: "- Pokutę masz na OneDrive, w folderze z krzyżami.\n- Jakim folderze z krzyżami?\n- No ten XXX.",
             episode: {name: "Programista u spowiedzi", url: "https://www.youtube.com/watch?v=7L9U_D49oB4"}
         }
     ];

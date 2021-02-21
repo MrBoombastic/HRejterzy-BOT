@@ -38,10 +38,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (!message.content.startsWith(config.prefix) || message.author.bot || !message.guild) return;
-    if (cooldown.get(message.channel.id) > Date.now()) return message.channel.send(`Nie tak szybko! Komend na tym kanale można używać co ${config.cooldownTime / 1000} sekundy!`);
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-    client.commands.get(command).run(message, args, Discord);
+    const cmd = client.commands.get(command);
+    if (!cmd) return;
+    if (cooldown.get(message.channel.id) > Date.now()) return message.channel.send(`Nie tak szybko! Komend na tym kanale można używać co ${config.cooldownTime / 1000} sekundy!`);
+    cmd.run(message);
     cooldown.set(message.channel.id, Date.now() + config.cooldownTime);
 });
 

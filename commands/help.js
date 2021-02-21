@@ -1,7 +1,6 @@
 module.exports = {
     name: 'help',
     async run(message) {
-
         const embed = new Discord.MessageEmbed()
             .setColor('GREEN')
             .setTitle('Pomoc bota HRejterzy')
