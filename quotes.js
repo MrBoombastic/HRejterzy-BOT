@@ -37,5 +37,30 @@ module.exports =
         {
             text: "- Pan... bo pan pracował do tej pory... pan pracował w tym... w C#, tak?\n- Tak, w C#.\n- Mhm, i... y... Gdzie ta firma ma siedzibę?\n- W Grudziądzu.",
             episode: {name: "Pytanie z C# podczas rozmowy o pracę", url: "https://www.youtube.com/watch?v=vNBenPPK2uc"}
+        },
+        {
+            text: "- Jaki jest Pana adres?\n- 135.142.58.16",
+            episode: {name: "Jaki jest pana adres?", url: "https://www.youtube.com/watch?v=qS1CSGNuPwo"}
+        },
+        {
+            text: "- Ile pani słów pisze na minutę?\n- Ja nie piszę w słowach. Ja piszę w klawiaturach.",
+            episode: {
+                name: "Szybkie pisanie na klawiaturze w wykonaniu HRowca",
+                url: "https://www.youtube.com/watch?v=KVOeuu5DTwg"
+            }
+        },
+        {
+            text: "Automaty przeszły, testy na zielono wszystkie. No, możemy wydawać.",
+            episode: {
+                name: "Wystawianie zmian w kodzie na produkcję w piątek o 16",
+                url: "https://www.youtube.com/watch?v=R0WFk52dusw"
+            }
+        },
+        {
+            text: "- Co to jest według pana dobra komunikacja?\n- No... po TLSie.",
+            episode: {
+                name: "Programista mówi czym jest dobra komunikacja",
+                url: "https://www.youtube.com/watch?v=hG2Rpe6OaY8"
+            }
         }
     ];
