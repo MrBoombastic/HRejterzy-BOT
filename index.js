@@ -43,7 +43,7 @@ client.on('message', message => {
     const cmd = client.commands.get(command);
     if (!cmd) return;
     if (cooldown.get(message.channel.id) > Date.now()) return message.channel.send(`Nie tak szybko! Komend na tym kanale można używać co ${config.cooldownTime / 1000} sekundy!`);
-    cmd.run(message);
+    cmd.run(message, args);
     cooldown.set(message.channel.id, Date.now() + config.cooldownTime);
 });
 

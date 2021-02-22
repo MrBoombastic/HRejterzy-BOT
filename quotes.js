@@ -33,5 +33,9 @@ module.exports =
         {
             text: "- Pokutę masz na OneDrive, w folderze z krzyżami.\n- Jakim folderze z krzyżami?\n- No ten XXX.",
             episode: {name: "Programista u spowiedzi", url: "https://www.youtube.com/watch?v=7L9U_D49oB4"}
+        },
+        {
+            text: "- Pan... bo pan pracował do tej pory... pan pracował w tym... w C#, tak?\n- Tak, w C#.\n- Mhm, i... y... Gdzie ta firma ma siedzibę?\n- W Grudziądzu.",
+            episode: {name: "Pytanie z C# podczas rozmowy o pracę", url: "https://www.youtube.com/watch?v=vNBenPPK2uc"}
         }
     ];

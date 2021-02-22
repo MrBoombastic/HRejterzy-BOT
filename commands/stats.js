@@ -1,7 +1,7 @@
 const version = require('child_process')
     .execSync('git rev-parse --short HEAD')
     .toString().trim();
-
+const quotes = require("../quotes.js");
 module.exports = {
     name: 'stats',
     async run(message) {
@@ -9,6 +9,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setColor('GREEN')
             .setTitle('Statystyki bota HRejterzy')
+            .addField("Cytatów:", quotes.length)
             .addField('RAM (RSS):', Math.round(process.memoryUsage().rss / 1024 / 1024) + " MB", true)
             .addField('Serwery:', client.guilds.cache.size, true)
             .addField("Wersja: ", `[${version}](https://github.com/MrBoombastic/HRejterzy-BOT/commit/${version})`, true)

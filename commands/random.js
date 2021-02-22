@@ -3,10 +3,11 @@ const quotes = require("../quotes.js");
 module.exports = {
     name: 'random',
     async run(message) {
-        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        const randomNumber = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomNumber];
         const embed = new Discord.MessageEmbed()
             .setColor('RANDOM')
-            .setFooter('HRejterzy', "https://codetwocdn.azureedge.net/images/css-assets/top-C2Logo-2020.png")
+            .setFooter(`HRejterzy - cytat #${randomNumber}`, "https://codetwocdn.azureedge.net/images/css-assets/top-C2Logo-2020.png")
             .setURL(randomQuote.episode.url)
             .setDescription("> " + randomQuote.text.replaceAll("\n", "\n> "))
             .setTimestamp()

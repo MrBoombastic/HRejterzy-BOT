@@ -6,6 +6,7 @@ module.exports = {
             .setTitle('Pomoc bota HRejterzy')
             .addField('Prefix:', config.prefix, true)
             .addField('Komendy:', `\`random\` - Pokazuje losowy cytat HRejterów.` +
+                `\n\`quote <liczba>\` - Wyświetla wskazany cytat.` +
                 `\n\`stats\` - Pokazuje statystyki bota.` +
                 `\n\`help\` - Wyświetla niniejszą pomoc.` +
                 `\n\`add\` - Udostępnia link do dodania bota.`, true)
