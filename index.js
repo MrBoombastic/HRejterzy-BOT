@@ -37,7 +37,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(config.prefix) || message.author.bot || !message.guild) return;
+    if (!message.content.toLowerCase().startsWith(config.prefix) || message.author.bot || !message.guild) return;
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     const cmd = client.commands.get(command);
