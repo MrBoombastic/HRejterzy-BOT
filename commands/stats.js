@@ -4,6 +4,7 @@ const version = require('child_process')
 const quotes = require("../quotes.js");
 module.exports = {
     name: 'stats',
+    desc: "Pokazuje statystyki bota.",
     async run(message) {
 
         const embed = new Discord.MessageEmbed()
@@ -17,6 +18,7 @@ module.exports = {
             .addField("Ping:", client.ws.ping, true)
             .addField("isPies()", "true", true)
             .setURL("https://github.com/MrBoombastic/HRejterzy-BOT")
+            .setImage("https://i.imgur.com/rO1vNfp.png")
             .setTimestamp();
 
         await message.channel.send(embed);

@@ -1,5 +1,6 @@
 module.exports = {
     name: 'add',
+    desc: "Udostępnia link do dodania bota.",
     async run(message) {
         const embed = new Discord.MessageEmbed()
             .setColor('GREEN')

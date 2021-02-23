@@ -2,6 +2,7 @@ const quotes = require("../quotes.js");
 
 module.exports = {
     name: 'random',
+    desc: "Pokazuje losowy cytat HRejterów.",
     async run(message) {
         const randomNumber = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomNumber];

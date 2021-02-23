@@ -2,6 +2,7 @@ const quotes = require("../quotes.js");
 
 module.exports = {
     name: 'quote',
+    desc: "Wyświetla wskazany cytat.",
     async run(message, args) {
         const number = parseInt(args[0]);
         if (Number.isNaN(number)) return message.channel.send("Podana wartość nie jest liczbą!");
