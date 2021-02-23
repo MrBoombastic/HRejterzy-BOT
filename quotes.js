@@ -62,5 +62,27 @@ module.exports =
                 name: "Programista mówi czym jest dobra komunikacja",
                 url: "https://www.youtube.com/watch?v=hG2Rpe6OaY8"
             }
+        },
+        {
+            text: "- Co pan tutaj widzi?\n- Jakby się tak zastanowić... Myślę, że to jest wyrażenie regularne, tak, tak, to jest na 100% zbiór złożonych łańcuchów wyrażeń regularnych, bo tutaj widać taki złożony łańcuch z elementami neutralnej konkatenacji. Proszę sobie zobaczyć, to widać, wyraźnie.\n- Mhm, zapiszę sobie, że jest pan pierdolnięty, dobrze?\n- Mhm.",
+            episode: {
+                url: "https://www.youtube.com/watch?v=NDUXoVPE8LQ",
+                name: "Programista u psychiatry (ekranizacja mema)"
+            }
+        },
+        {
+            text: "- To się nie wyświetla, bo nie ma JSONa, tak?\n- No tak, zgadza się.\n- No to bierz telefon i dzwoń do JSONa!",
+            episode: {url: "https://www.youtube.com/watch?v=b4QDxoWlPFw", name: "Kiedy nie ma JSONa..."}
+        },
+        {
+            text: "Fenomenalny smak keczupu z lokalnej... Żabki.",
+            episode: {url: "https://www.youtube.com/watch?v=IZoAQWPGSXo", name: "IT MacŁowicz"}
+        },
+        {
+            text: "- I pana słabe cechy?\n- Czasami robię się chamski, kiedy staram się kontrolować sytuację...\n- Ale nie...\n- Zamknij ryj kurwa, jeszcze nie skończyłem.",
+            episode: {
+                url: "https://www.youtube.com/watch?v=rs58HMb_A3E",
+                name: "Jakie są Pana słabe cechy? Czyli zatrudnianie dyrektora."
+            }
         }
     ];
